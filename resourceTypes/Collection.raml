@@ -15,15 +15,18 @@ get:
     400:
       body:
         application/json:
-          example: !include ../examples/status/Status400.raml
+          example:
+            message: Invalid Input
     404:
       body:
         application/json:
-          example: !include ../examples/status/Status404.raml
+          example:
+            message: Not Found
     500:
       body:
         application/json:
-          example: !include ../examples/status/Status500.raml
+          example:
+            message: Internal Server Error
 post?:
   description: Create a new <<type>>
   body:
@@ -47,8 +50,10 @@ post?:
     400:
       body:
         application/json:
-          example: !include ../examples/status/Status400.raml
+          example:
+            message: Invalid Input
     500:
       body:
         application/json:
-          example: !include ../examples/status/Status500.raml
+          example:
+            message: Internal Server Error
