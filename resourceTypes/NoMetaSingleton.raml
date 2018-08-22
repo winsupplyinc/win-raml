@@ -1,0 +1,76 @@
+#%RAML 1.0 ResourceType
+get?:
+  description: Retrieve a single <<type>>
+  responses:
+    200:
+      description: Successfully retrieved <<type>>
+      body:
+        application/json:
+          type: <<type>>
+          example: <<example>>
+    400:
+      body:
+        application/json:
+          example:
+            message: Invalid Input
+    404:
+      body:
+        application/json:
+          example:
+            message: Not Found
+    500:
+      body:
+        application/json:
+          example:
+            message: Internal Server Error
+delete?:
+  description: Delete an existing <<type>>
+  responses:
+    200:
+      description: Successfully deleted <<type>>
+      body:
+        application/json:
+          type: object
+    400:
+      body:
+        application/json:
+          example:
+            message: Invalid Input
+    404:
+      body:
+        application/json:
+          example:
+            message: Not Found
+    500:
+      body:
+        application/json:
+          example:
+            message: Internal Server Error
+put?:
+  description: Update an existing <<type>>
+  body:
+    application/json:
+      type: <<type>>
+      example: <<putExample>>
+  responses:
+    200:
+      description: Successfully updated <<type>>
+      body:
+        application/json:
+          type: <<type>>
+          example: <<example>>
+    400:
+      body:
+        application/json:
+          example:
+            message: Invalid Input
+    404:
+      body:
+        application/json:
+          example:
+            message: Not Found
+    500:
+      body:
+        application/json:
+          example:
+            message: Internal Server Error

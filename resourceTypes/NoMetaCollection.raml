@@ -1,0 +1,48 @@
+#%RAML 1.0 ResourceType
+get?:
+  description: Retrieve all <<type|!pluralize>>
+  responses:
+    200:
+      description: Successfully retrieved <<type|!pluralize>>
+      body:
+        application/json:
+          type: <<type>>[]
+          example: <<arrayExample>>
+    400:
+      body:
+        application/json:
+          example:
+            message: Invalid Input
+    404:
+      body:
+        application/json:
+          example:
+            message: Not Found
+    500:
+      body:
+        application/json:
+          example:
+            message: Internal Server Error
+post?:
+  description: Create a new <<type>>
+  body:
+    application/json:
+      type: <<postType>>
+      example: <<postExample>>
+  responses:
+    201:
+      description: Successfully added <<type>>
+      body:
+        application/json:
+          type:  <<type>>
+          example: <<example>>
+    400:
+      body:
+        application/json:
+          example:
+            message: Invalid Input
+    500:
+      body:
+        application/json:
+          example:
+            message: Internal Server Error
