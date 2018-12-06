@@ -1,0 +1,17 @@
+#%RAML 1.0 Trait
+body:
+  application/json:
+    type: object
+    properties:
+      meta:
+        type: object
+        example:
+          paginationInfo:
+            rpp: 10
+            page: 1
+            currentPage: 1
+            pageCount: 5
+            totalCount: 50
+      data:
+        type: <<type>>[]
+        example: <<arrayExample>>
