@@ -6,7 +6,7 @@ get?:
       description: Successfully retrieved <<type>>
       body:
         application/json:
-          type: !include ../../types/WinResponse.raml
+          type: !include WinResponse.raml
           example: <<example>>
     400:
       body:
@@ -30,7 +30,7 @@ delete?:
       description: Successfully deleted <<type>>
       body:
         application/json:
-          type: !include ../../types/WinResponse.raml
+          type: !include WinResponse.raml
           example:
             meta:
               message: Successfully deleted <<type>>
@@ -61,7 +61,7 @@ put?:
       description: Successfully updated <<type>>
       body:
         application/json:
-          type: !include ../../types/WinResponse.raml
+          type: !include WinResponse.raml
           example: <<example>>
     400:
       body:

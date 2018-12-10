@@ -6,7 +6,7 @@ get?:
       description: Successfully retrieved <<type|!pluralize>>
       body:
         application/json:
-          type: !include ../../types/WinArrayResponse.raml
+          type: !include WinArrayResponse.raml
           example: <<arrayExample>>
     400:
       body:
@@ -34,7 +34,7 @@ post?:
       description: Successfully added <<type>>
       body:
         application/json:
-          type:  !include ../../types/WinResponse.raml
+          type:  !include WinResponse.raml
           example: <<example>>
     400:
       body:
