@@ -6,21 +6,24 @@ get?:
       description: Successfully retrieved <<type|!pluralize>>
       body:
         application/json:
-          type: !include WinArrayResponse.raml
+          type: object
           example: <<arrayResponse>>
     400:
       body:
         application/json:
+          type: object
           example:
             message: Invalid Input
     404:
       body:
         application/json:
+          type: object
           example:
             message: Not Found
     500:
       body:
         application/json:
+          type: object
           example:
             message: Internal Server Error
 post?:
@@ -34,15 +37,17 @@ post?:
       description: Successfully added <<type>>
       body:
         application/json:
-          type:  !include WinResponse.raml
+          type:  object
           example: <<response>>
     400:
       body:
         application/json:
+          type: object
           example:
             message: Invalid Input
     500:
       body:
         application/json:
+          type: object
           example:
             message: Internal Server Error

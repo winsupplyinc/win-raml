@@ -10,15 +10,17 @@ post?:
       description: Successfully posted <<type>>
       body:
         application/json:
-          type:  !include WinResponse.raml
+          type:  object
           example: <<response>>
     400:
       body:
         application/json:
+          type: object
           example:
             message: Invalid Input
     500:
       body:
         application/json:
+          type: object
           example:
             message: Internal Server Error
