@@ -7,24 +7,23 @@ get?:
       body:
         application/json:
           type: object
-          properties:
-            meta: object
-            data:
-              type: <<type>>[]
-              example: <<arrayExample>>
+          example: <<arrayResponse>>
     400:
       body:
         application/json:
+          type: object
           example:
             message: Invalid Input
     404:
       body:
         application/json:
+          type: object
           example:
             message: Not Found
     500:
       body:
         application/json:
+          type: object
           example:
             message: Internal Server Error
 post?:
@@ -38,22 +37,17 @@ post?:
       description: Successfully added <<type>>
       body:
         application/json:
-          type: object
-          properties:
-            meta:
-              type: object
-              example:
-                message: Successfully added <<type>>
-            data:
-              type:  <<type>>
-              example: <<example>>
+          type:  object
+          example: <<response>>
     400:
       body:
         application/json:
+          type: object
           example:
             message: Invalid Input
     500:
       body:
         application/json:
+          type: object
           example:
             message: Internal Server Error

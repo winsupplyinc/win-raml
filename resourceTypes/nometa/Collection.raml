@@ -11,16 +11,19 @@ get?:
     400:
       body:
         application/json:
+          type: object
           example:
             message: Invalid Input
     404:
       body:
         application/json:
+          type: object
           example:
             message: Not Found
     500:
       body:
         application/json:
+          type: object
           example:
             message: Internal Server Error
 post?:
@@ -39,10 +42,12 @@ post?:
     400:
       body:
         application/json:
+          type: object
           example:
             message: Invalid Input
     500:
       body:
         application/json:
+          type: object
           example:
             message: Internal Server Error

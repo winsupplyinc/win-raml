@@ -7,24 +7,23 @@ get?:
       body:
         application/json:
           type: object
-          properties:
-            meta: object
-            data:
-              type: <<type>>
-              example: <<example>>
+          example: <<response>>
     400:
       body:
         application/json:
+          type: object
           example:
             message: Invalid Input
     404:
       body:
         application/json:
+          type: object
           example:
             message: Not Found
     500:
       body:
         application/json:
+          type: object
           example:
             message: Internal Server Error
 delete?:
@@ -35,25 +34,26 @@ delete?:
       body:
         application/json:
           type: object
-          properties:
+          example:
             meta:
-              type: object
-              example:
-                message: Successfully deleted <<type>>
-            data: object
+              message: Successfully deleted <<type>>
+            data: {}
     400:
       body:
         application/json:
+          type: object
           example:
             message: Invalid Input
     404:
       body:
         application/json:
+          type: object
           example:
             message: Not Found
     500:
       body:
         application/json:
+          type: object
           example:
             message: Internal Server Error
 put?:
@@ -68,23 +68,22 @@ put?:
       body:
         application/json:
           type: object
-          properties:
-            meta: object
-            data:
-              type: <<type>>
-              example: <<example>>
+          example: <<response>>
     400:
       body:
         application/json:
+          type: object
           example:
             message: Invalid Input
     404:
       body:
         application/json:
+          type: object
           example:
             message: Not Found
     500:
       body:
         application/json:
+          type: object
           example:
             message: Internal Server Error

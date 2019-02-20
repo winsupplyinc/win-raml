@@ -10,22 +10,17 @@ post?:
       description: Successfully posted <<type>>
       body:
         application/json:
-          type: object
-          properties:
-            meta:
-              type: object
-              example:
-                message: Successfully posted <<type>>
-            data:
-              type:  <<type>>
-              example: <<example>>
+          type:  object
+          example: <<response>>
     400:
       body:
         application/json:
+          type: object
           example:
             message: Invalid Input
     500:
       body:
         application/json:
+          type: object
           example:
             message: Internal Server Error
