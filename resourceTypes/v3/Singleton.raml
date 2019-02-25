@@ -7,7 +7,7 @@ get?:
       body:
         application/json:
           type: object
-          example: <<singletonExample>>
+          examples: <<singletonExample>>
     400:
       body:
         application/json:
@@ -61,14 +61,14 @@ put?:
   body:
     application/json:
       type: <<type>>
-      example: <<putExample>>
+      examples: <<putExample>>
   responses:
     200:
       description: Successfully updated <<type>>
       body:
         application/json:
           type: object
-          example: <<singletonExample>>
+          examples: <<singletonExample>>
     400:
       body:
         application/json:

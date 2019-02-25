@@ -7,7 +7,7 @@ get?:
       body:
         application/json:
           type: object
-          example: <<collectionExample>>
+          examples: <<collectionExample>>
     400:
       body:
         application/json:
@@ -31,14 +31,14 @@ post?:
   body:
     application/json:
       type: <<postType>>
-      example: <<postExample>>
+      examples: <<postExample>>
   responses:
     201:
       description: Successfully added <<type>>
       body:
         application/json:
           type:  object
-          example: <<singletonExample>>
+          examples: <<singletonExample>>
     400:
       body:
         application/json:

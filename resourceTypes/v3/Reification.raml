@@ -4,14 +4,14 @@ post?:
   body:
     application/json:
       type: <<type>>
-      example: <<putExample>>
+      examples: <<putExample>>
   responses:
     201:
       description: Successfully posted <<type>>
       body:
         application/json:
           type:  object
-          example: <<singletonExample>>
+          examples: <<singletonExample>>
     400:
       body:
         application/json:
